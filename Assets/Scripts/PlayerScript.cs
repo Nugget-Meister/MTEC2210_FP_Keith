@@ -42,7 +42,6 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
             Instantiate(bullet, transform.position, transform.rotation);
-            bullet.GetComponent<BulletScript>().hostile = 0;
             audioSource.PlayOneShot(shoot);
            
             

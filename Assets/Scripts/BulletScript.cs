@@ -13,12 +13,16 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        if (hostile == 1) { speed = -speed;}
     }
 
     // Update is called once per frame
     void Update()
     {
+        rb2d.transform.rotation = transform.rotation;
+        
         rb2d.velocity = new Vector2(0, speed);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
