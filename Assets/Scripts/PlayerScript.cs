@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour
 
     public void applyDamage(float damage)
     {
-        health -= damage;
+        health -= damage;   
     }
 
 
