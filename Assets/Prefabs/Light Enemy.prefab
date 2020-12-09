@@ -135,7 +135,7 @@ MonoBehaviour:
   speed: 4
   health: 1
   minDelay: 4
-  maxDelay: 5
+  maxDelay: 9
   canFire: 1
   canMove: 1
 --- !u!61 &2016850810499683418

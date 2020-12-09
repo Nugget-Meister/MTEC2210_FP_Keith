@@ -102,9 +102,9 @@ public class EnemyScript : MonoBehaviour
         if(collision.gameObject.layer == 9)
 
         {
-            Debug.Log("collided with entity");
+           // Debug.Log("collided with entity");
         }
-        Debug.Log(collision.gameObject.layer);
+      //  Debug.Log(collision.gameObject.layer);
         
         speed = -speed;
     }

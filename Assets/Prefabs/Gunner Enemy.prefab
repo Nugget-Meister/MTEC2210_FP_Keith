@@ -132,7 +132,7 @@ MonoBehaviour:
   death: {fileID: 8300000, guid: 2a47e76af8274614bbf730eac699b9a6, type: 3}
   shoot: {fileID: 8300000, guid: 1d8fc22e481b35645ba16485274f05e5, type: 3}
   bullet: {fileID: 1864346766594366627, guid: 908764ed8ab499d4b82b14c8edd37df4, type: 3}
-  speed: 5
+  speed: 3
   health: 1
   minDelay: 1
   maxDelay: 4

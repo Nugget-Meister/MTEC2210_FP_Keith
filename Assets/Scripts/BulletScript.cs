@@ -32,7 +32,7 @@ public class BulletScript : MonoBehaviour
             if (collision.GetComponent<EnemyScript>())
             {
                 EnemyScript target = collision.GetComponent<EnemyScript>();
-                Debug.Log("is hostile");
+            //    Debug.Log("is hostile");
                 Destroy(gameObject);
                 target.applyDamage(damage);
 
@@ -47,7 +47,7 @@ public class BulletScript : MonoBehaviour
             }
             else 
             {
-                Debug.Log("is wall");
+             //   Debug.Log("is wall");
                 Destroy(gameObject);
             }
             
@@ -65,13 +65,13 @@ public class BulletScript : MonoBehaviour
             if (collision.GetComponent<PlayerScript>())
             {
                 PlayerScript target = collision.GetComponent<PlayerScript>();
-                Debug.Log("Is player");
+            //    Debug.Log("Is player");
                 target.applyDamage(damage);
                 Destroy(gameObject);
             }
             else
             {
-                Debug.Log("is wall");
+             //   Debug.Log("is wall");
                 Destroy(gameObject);
             }
         }

@@ -134,8 +134,8 @@ MonoBehaviour:
   bullet: {fileID: 1864346766594366627, guid: 908764ed8ab499d4b82b14c8edd37df4, type: 3}
   speed: 5
   health: 2
-  minDelay: 2
-  maxDelay: 8
+  minDelay: 4
+  maxDelay: 7
   canFire: 1
   canMove: 1
 --- !u!61 &2016850810499683418
