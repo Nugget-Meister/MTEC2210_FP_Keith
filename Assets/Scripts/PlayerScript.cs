@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -17,19 +18,29 @@ public class PlayerScript : MonoBehaviour
 
     public float speed = 10f;
     public float health = 1f;
-    
 
+    public float score = 10f;
+
+    GameObject scoreObject;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+
+        scoreObject = GameObject.Find("gameScore");
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(health < 0){Die();}
+
+        scoreObject.GetComponent<Text>().text = score.ToString();
+        //
+
+        if (health < 0){Die();}
 
         float horizontal = Input.GetAxis("Horizontal") * speed;
         rb2d.velocity = new Vector2(horizontal, 0f);

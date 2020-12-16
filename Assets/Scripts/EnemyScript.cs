@@ -8,7 +8,6 @@ public class EnemyScript : MonoBehaviour
 
     private GameObject camAttach;
     public AudioSource audioSource;
-    public AudioClip active;
     public AudioClip death;
     public AudioClip shoot;
    
@@ -17,12 +16,19 @@ public class EnemyScript : MonoBehaviour
     public GameObject bullet;
 
     public float speed = 5.0f;
+    private float vspeed = -0.1f;
     public float health = 1.0f;
     private float second = 0.0f;
+    private float secondB = 0.0f;
     public float minDelay = 2.0f;
     public float maxDelay = 5.0f;
     public bool canFire = true;
     public bool canMove = true;
+    private float delayColor = 0.5f;
+
+    public float value = 100;
+
+    private PlayerScript player;
 
     
 
@@ -35,6 +41,7 @@ public class EnemyScript : MonoBehaviour
         camAttach = GameObject.Find("Main Camera");
         audioSource = camAttach.GetComponent<AudioSource>();
 
+        player = GameObject.Find("PlayerController").GetComponent<PlayerScript>();
 
         
 
@@ -43,16 +50,23 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ if (secondB >= delayColor) 
+        {
+          SpriteRenderer color = gameObject.GetComponentInChildren<SpriteRenderer>();
+            color.color = new Color (1, 1, 1, 1);
+            secondB = 0.0f;
+        }
 
 
         if (canMove)
         {
-            rb2d.velocity = new Vector2(speed, 0);
+            rb2d.velocity = new Vector2(speed, vspeed);
         }
        
         if (Time.time > second) 
         {
             second += 0.01f;
+            secondB += 0.01f;
         }
 
         if (canFire)
@@ -68,6 +82,7 @@ public class EnemyScript : MonoBehaviour
         if (health < 0) 
         {
             Die();
+           
         }
     }
 
@@ -80,9 +95,12 @@ public class EnemyScript : MonoBehaviour
 
     void Die() 
     {
+        player.score = player.score + value;
         audioSource.PlayOneShot(death);
         gameObject.SetActive(false);
         Destroy(gameObject);
+
+
     }
 
 
@@ -97,15 +115,22 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 8) 
         {
-          //  Debug.Log("collided with wall");
+            //  Debug.Log("collided with wall");
+            speed = -speed; 
         }
         if(collision.gameObject.layer == 9)
 
         {
-           // Debug.Log("collided with entity");
+            // Debug.Log("collided with entity");
+            speed = -speed;
         }
+        if (collision.gameObject.layer == 10) 
+        {
+            vspeed = -vspeed;
+        }
+      //  if(collision.gameObject.)
       //  Debug.Log(collision.gameObject.layer);
         
-        speed = -speed;
+        
     }
 }

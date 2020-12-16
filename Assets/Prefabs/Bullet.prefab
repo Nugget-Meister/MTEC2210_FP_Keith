@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 141121649
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1af9edd3c84ea6447bbfd0370882a0b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,6 +126,9 @@ MonoBehaviour:
   speed: 10
   damage: 2
   hostile: 0
+  audioSource: {fileID: 0}
+  active: {fileID: 8300000, guid: ad7df6a7722c0be46967ffdaf30cc8b0, type: 3}
+  camControl: {fileID: 0}
 --- !u!50 &5960332093890094476
 Rigidbody2D:
   serializedVersion: 4

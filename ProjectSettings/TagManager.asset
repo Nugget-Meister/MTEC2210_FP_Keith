@@ -15,7 +15,7 @@ TagManager:
   - 
   - Walls
   - Entity
-  - 
+  - Bounce
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bg
+    uniqueID: 3048646227
+    locked: 0
+  - name: entity
+    uniqueID: 141121649
     locked: 0

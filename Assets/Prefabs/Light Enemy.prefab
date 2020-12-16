@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 141121649
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4322b5ac79955d743a1406212890a407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,11 +128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  active: {fileID: 8300000, guid: ad7df6a7722c0be46967ffdaf30cc8b0, type: 3}
   death: {fileID: 8300000, guid: 2a47e76af8274614bbf730eac699b9a6, type: 3}
   shoot: {fileID: 8300000, guid: 1d8fc22e481b35645ba16485274f05e5, type: 3}
   bullet: {fileID: 1864346766594366627, guid: 908764ed8ab499d4b82b14c8edd37df4, type: 3}
   speed: 4
+  vspeed: -0.5
   health: 1
   minDelay: 4
   maxDelay: 9

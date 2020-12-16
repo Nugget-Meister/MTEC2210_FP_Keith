@@ -128,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  active: {fileID: 8300000, guid: ad7df6a7722c0be46967ffdaf30cc8b0, type: 3}
   death: {fileID: 8300000, guid: 2a47e76af8274614bbf730eac699b9a6, type: 3}
   shoot: {fileID: 8300000, guid: 1d8fc22e481b35645ba16485274f05e5, type: 3}
   bullet: {fileID: 1864346766594366627, guid: 908764ed8ab499d4b82b14c8edd37df4, type: 3}
@@ -138,6 +137,7 @@ MonoBehaviour:
   maxDelay: 8
   canFire: 1
   canMove: 1
+  value: 1000
 --- !u!61 &2016850810499683418
 BoxCollider2D:
   m_ObjectHideFlags: 0
