@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: hostile
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1333418085685760680, guid: 748c5a69909517848b53a1cae2836465,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6810158160031547254, guid: 748c5a69909517848b53a1cae2836465,
         type: 3}
       propertyPath: m_Name
